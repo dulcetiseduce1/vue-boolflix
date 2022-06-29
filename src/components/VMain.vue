@@ -1,10 +1,17 @@
 <template>
     <div>
         <div class="container">
-            <div class="row g-4" v-if="!getSearched">
-                <div class="col-3"  v-for="(movie,i) in getMoviesList" :key="i"><VCard :card="movie"/></div>
+
+            <div class="row g-4" v-if="getMoviesList.length>0 && getMoviesList!==undefined">
+
+                <div class="col-3"  v-for="(movie,i) in getMoviesList" :key="i">
+
+                <VCard :card="movie"/></div>
+
             </div>
-            <div v-else-if="getSearched && getMoviesList.length===0">Nessun risultato</div>
+
+            <div v-else>Non è stato trovato nessun risultato</div>
+            
         </div>
     </div>
 </template>
@@ -18,9 +25,6 @@ import VCard from './VCard.vue';
         getMoviesList() {
             return state.movies;
         },
-        getSearched() {
-            return state.errore;
-        }
     },
     components: { VCard }
 }
