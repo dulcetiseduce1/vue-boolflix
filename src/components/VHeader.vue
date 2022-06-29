@@ -1,8 +1,11 @@
 <template>
     <div>
         <div class="input-group mb-3">
+
             <input type="text" class="form-control" placeholder="Inserisci titolo da cercare" v-model="searchedTitle">
+
             <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="getSearchedTitle">Cerca</button>
+            
         </div>
 
     </div>
