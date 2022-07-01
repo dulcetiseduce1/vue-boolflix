@@ -1,24 +1,24 @@
 <template>
   <div id="app">
-    <VHeader/>
-    <VMain/>
-    <VCard/>
+    <VHeader />
+    <VMain />
+    <VCard />
   </div>
 </template>
 
 <script>
-import VHeader from './components/VHeader.vue'
-import VMain from './components/VMain.vue'
-import VCard from './components/VCard.vue'
+import VHeader from "./components/VHeader.vue";
+import VMain from "./components/VMain.vue";
+import VCard from "./components/VCard.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     VHeader,
     VMain,
-    VCard
-}
-}
+    VCard,
+  },
+};
 </script>
 
 <style lang="scss">
